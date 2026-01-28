@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Image Slider</title>
+  <style>
+    body {
+      text-align: center;
+      background-color: bisque;
+      font-family: Arial, sans-serif;
+    }
+
+    .slideshow-container {
+      position: relative;
+      width: 90%;
+      max-width: 900px;
+      margin: auto;
+      overflow: hidden;
+      border-radius: 10px;
+      padding: 10px;
+    }
+    .slides {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .slide {
+      flex-shrink: 0;
+      width: 25%;
+      padding: 5px;
+    }
+/* 
+    .slide img {
+      width: 100%;
+      border-radius: 10px;
+    } */
+
+    .prev, .next {
+      position: absolute;
+      top: 90%;
+      transform: translateY(-50%);
+      font-size: 18px;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      border-radius: 50%;
+      z-index: 1;
+    }
+
+    .prev {
+      left: 10px;
+    }
+
+    .next {
+      right: 10px;
+    }
+    .slide{
+      background-color: white;
+      margin: 1rem;
+      padding: 1rem;
+    }
+    .check_main img{
+      width: 5rem;
+      height: 5rem;
+      border-radius: 1rem;
+    }
+  </style>
+</head>
+<body>
+<div class="check_main">
+  <div class="slideshow-container">
+    <div class="slides">
+      <div class="slide">  <img src="./images/rayan.jpg" alt="something went wrong" class="s6_sub1_img">
+            <div class="s6_sub1_div1_logo1"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi ratione hic voluptatibus exercitationem molestiae nihil quisquam vero error tempora quas.</p>
+            <h4>Rayan Thompson</h4>
+            <h6>Business Analyst</h6>
+            <div class="s6_sub1_div1_logo2"><i class="fa-solid fa-message"></i></div></div>
+      <div class="slide">   <img src="./images/rachel.jpg" alt="something went wrong" class="s6_sub1_img">
+            <div class="s6_sub1_div1_logo1"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi ratione hic voluptatibus exercitationem molestiae nihil quisquam vero error tempora quas.</p>
+            <h4>Rachel Chen</h4>
+            <h6>Project manager</h6>
+            <div class="s6_sub1_div1_logo2"><i class="fa-solid fa-message"></i></div></div>
+      <div class="slide">     <img src="./images/jessica.jpg" alt="something went wrong" class="s6_sub1_img">
+            <div class="s6_sub1_div1_logo1"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi ratione hic voluptatibus exercitationem molestiae nihil quisquam vero error tempora quas.</p>
+            <h4>Jassica Martinez
+            </h4>
+            <h6>UX Designer</h6>
+            <div class="s6_sub1_div3_logo2"><i class="fa-solid fa-message"></i></div></div>
+      <div class="slide"> <img src="./images/david.jpg" alt="something went wrong" class="s6_sub1_img">
+            <div class="s6_sub1_div1_logo1"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi ratione hic voluptatibus exercitationem molestiae nihil quisquam vero error tempora quas.</p>
+            <h4>David Rodrigues</h4>
+            <h6>Software Engineer</h6>
+            <div class="s6_sub1_div4_logo2"><i class="fa-solid fa-message"></i></div></div>
+      <div class="slide">       <img src="./images/amanda.jpg" alt="something went wrong" class="s6_sub1_img">
+            <div class="s6_sub1_div1_logo1"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi ratione hic voluptatibus exercitationem molestiae nihil quisquam vero error tempora quas.</p>
+            <h4>Amanda Willson 
+            </h4>
+            <h6>Creative Director</h6>
+            <div class="s6_sub1_div5_logo2"><i class="fa-solid fa-message"></i></div></div>
+              <div class="slide">  <img src="./images/rayan.jpg" alt="something went wrong" class="s6_sub1_img">
+            <div class="s6_sub1_div1_logo1"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi ratione hic voluptatibus exercitationem molestiae nihil quisquam vero error tempora quas.</p>
+            <h4>Rayan Thompson</h4>
+            <h6>Business Analyst</h6>
+            <div class="s6_sub1_div1_logo2"><i class="fa-solid fa-message"></i></div></div>
+    </div>
+    <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+    <button class="next" onclick="changeSlide(1)">&#10095;</button>
+  </div>
+</div>
+  <script>
+    let slideIndex = 0;
+    const slidesContainer = document.querySelector('.slides');
+    const slides = document.querySelectorAll('.slide');
+    const slidesToShow = 3;
+
+    function showSlides(index) {
+      const slideWidth = slidesContainer.offsetWidth / slidesToShow;
+      const maxIndex = Math.ceil(slides.length / slidesToShow) - 1;
+
+      if (index > maxIndex) {
+        slideIndex = 0;
+      } else if (index < 0) {
+        slideIndex = maxIndex;
+      } else {
+        slideIndex = index;
+      }
+
+      const moveX = -(slideIndex * slideWidth * slidesToShow);
+      slidesContainer.style.transform = `translateX(${moveX}px)`;
+    }
+
+    function changeSlide(step) {
+      showSlides(slideIndex + step);
+    }
+
+    window.onload = () => {
+      showSlides(slideIndex);
+    };
+  </script>
+
+</body>
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+  <title>Document</title>
+  <style>
+    .carousel-inner img{
+      width: 20rem;
+      height: 20rem;
+    }
+  </style>
+</head>
+<body>
+  <div id="carouselExample" class="carousel slide">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="./images/about_angela.jpg" class="d-block w-100" alt="...">
+       <h1>heyy</h1>
+    </div>
+    <div class="carousel-item">
+      <img src="./images/about_daniel.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="./images/about_james.jpg" class="d-block w-100" alt="...">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+</body>
+</html> -->
