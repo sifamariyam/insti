@@ -159,21 +159,28 @@ a:hover {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  background-color: black;
+  /* background-color: black; */
 }
 .s2_sub1_div1,
 .s2_sub1_div2,
 .s2_sub1_div3,
 .s2_sub1_div4 {
-  width: 20rem;
+  width: 15rem;
   box-shadow: 0 8px 10px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  border-radius: 1rem;
+  text-align: center;
+  padding-bottom: 1rem;
+
 }
 .s2_sub1_div1 img,
 .s2_sub1_div2 img,
 .s2_sub1_div3 img,
 .s2_sub1_div4 img {
-  height: 25rem;
+  height: 15rem;
   width: 15rem;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
 }
 /* section2 ends */
 .s3 {
